@@ -1,0 +1,129 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+  animation: fadeIn 1s ease-in;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+select, button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+select {
+  background-color: #ffffff;
+  color: #333;
+}
+
+button {
+  background-color: #00c6ff;
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0086c3;
+  transform: scale(1.05);
+}
+
+.resultado {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.repo-card {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 12px;
+  text-align: left;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  min-height: 220px;
+}
+
+.repo-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.repo-card h3 {
+  margin-top: 0;
+  color: #ffeead;
+}
+
+.repo-card p {
+  margin: 5px 0;
+}
+
+.link-container {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.link-container a {
+  background-color: #00c6ff;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.link-container a:hover {
+  background-color: #0086c3;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
